@@ -16,9 +16,9 @@ namespace SubscriptionService.Logic
             _subscriptionDal = new SubscriptionDAL();
         }
 
-        public List<Subscription> GetAllSubscriptions()
+        public async Task<List<Subscription>> GetAllSubscriptions()
         {
-            return _subscriptionDal.GetAllSubscriptions();
+            return await _subscriptionDal.GetAllSubscriptions();
         }
     }
 }

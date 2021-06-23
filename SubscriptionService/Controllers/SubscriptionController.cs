@@ -18,9 +18,9 @@ namespace SubscriptionService.Controllers
         }
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var subscriptions = _subscriptionLogic.GetAllSubscriptions();
+            var subscriptions = await _subscriptionLogic.GetAllSubscriptions();
             return Ok(subscriptions);
         }
     }
